@@ -9,7 +9,7 @@ RUN apt-get update && apt-get -y install npm nodejs-legacy curl &&\
      && rm -rf /var/lib/apt/lists/*
 RUN npm cache clean -f && npm install -g n &&\
     n stable
-ADD alexa-fhem-0.3.0.tgz /
+ADD alexa-fhem-0.4.4tgz /
 RUN mv package alexa-fhem && cd alexa-fhem &&\
 	npm install && mkdir ~/.alexa && mkdir /config &&\
     cp config-sample.json /config/config.json && \
